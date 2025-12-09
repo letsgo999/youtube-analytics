@@ -73,7 +73,7 @@ def get_video_stats(creds, video_id):
     }
 
 def analyze_with_gemini(data):
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    model = genai.GenerativeModel('gemini-2.5-pro')
     prompt = f"""
     영상 제목: {data['title']} (게시일: {data['publish_date']})
     조회수: {data['basic_stats'][0]}, 총 시청시간(분): {data['basic_stats'][1]}
